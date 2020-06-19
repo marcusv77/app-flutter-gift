@@ -1,6 +1,6 @@
-# flutterapp
+# Gift App
 
-A new Flutter application.
+Application developed in flutter with the aid of the course "Creating Android and iOS Apps with Flutter". The project in question is a small application to see the most popular gifts.
 
 ## Getting Started
 
