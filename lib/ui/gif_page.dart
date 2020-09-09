@@ -11,8 +11,7 @@ class GifPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(_gifData["title"]),
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.blue,
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.share),
@@ -22,10 +21,18 @@ class GifPage extends StatelessWidget {
           )
         ],
       ),
-      backgroundColor: Colors.black,
-      body: Center(
-        child: Image.network(_gifData["images"]["fixed_height"]["url"]),
-      ),
+      backgroundColor: Colors.white,
+      body: Column(
+        children: <Widget>[
+          Padding(
+            padding: EdgeInsets.fromLTRB(10, 100, 10, 40),
+            child: Text(_gifData["title"], style: TextStyle(fontSize: 20))
+          ),
+          Center(
+            child: Image.network(_gifData["images"]["fixed_height"]["url"]),
+          )
+        ],
+      )
     );
   }
 }

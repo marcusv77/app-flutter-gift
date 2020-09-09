@@ -44,11 +44,11 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.blue,
         title: Image.network("https://developers.giphy.com/static/img/dev-logo-lg.7404c00322a8.gif"),
         centerTitle: true,
       ),
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.white,
       body: Column(
         children: <Widget>[
           Padding(
@@ -56,11 +56,11 @@ class _HomePageState extends State<HomePage> {
             child: TextField(
               decoration: InputDecoration(
                   labelText: "Search",
-                  labelStyle: TextStyle(color: Colors.white),
+                  labelStyle: TextStyle(color: Colors.black),
                   border: OutlineInputBorder()
               ),
-              style: TextStyle(color: Colors.white, fontSize: 18.0),
-              textAlign: TextAlign.center,
+              style: TextStyle(color: Colors.black, fontSize: 18.0),
+              textAlign: TextAlign.start,
               onSubmitted: (text){
                 setState(() {
                   _search = text;
@@ -109,7 +109,7 @@ class _HomePageState extends State<HomePage> {
     return GridView.builder(
         padding: EdgeInsets.all(10.0),
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
+          crossAxisCount: 1,
           crossAxisSpacing: 10.0,
           mainAxisSpacing: 10.0
         ),
@@ -138,9 +138,9 @@ class _HomePageState extends State<HomePage> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    Icon(Icons.add, color: Colors.white, size: 70.0,),
+                    Icon(Icons.add, color: Colors.blue, size: 70.0,),
                     Text("More",
-                      style: TextStyle(color: Colors.white, fontSize: 22.0),)
+                      style: TextStyle(color: Colors.blue, fontSize: 22.0),)
                   ],
                 ),
                 onTap: (){
